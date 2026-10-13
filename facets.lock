@@ -6,9 +6,23 @@
         "kind": "registry",
         "registry": "https://api.agentfacets.io"
       },
-      "version": "1.0.0",
-      "integrity": "sha256:feffcd79aba75e6cefc65d7ed9d575ac0a89d84342668ca7684039ecb3f53084",
+      "version": "1.1.0",
+      "integrity": "sha256:f4d4136925960b1a4e2b39f7f122be0eeb706af8ca8188814d61bfb45f785002",
       "assets": [
+        {
+          "scope": "project",
+          "type": "skill",
+          "name": "finding-facets",
+          "materialization": {
+            "kind": "authored"
+          },
+          "files": [
+            {
+              "path": "skills/finding-facets/SKILL.md",
+              "integrity": "sha256:9f026caa86236cc2f5289cab9a8791f5689857e53d6fb83f2420e626bd9e2012"
+            }
+          ]
+        },
         {
           "scope": "project",
           "type": "skill",
@@ -19,7 +33,7 @@
           "files": [
             {
               "path": "skills/using-facets/SKILL.md",
-              "integrity": "sha256:5354584990bbbacdff621c23062a8540d1849884b94ce739f86b429057042d24"
+              "integrity": "sha256:c8f048582e1379be8d10ff696f07f3dfc62a5f310636ee07245a6eccf10bc7a3"
             }
           ]
         }
