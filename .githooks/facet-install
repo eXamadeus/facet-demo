@@ -24,4 +24,4 @@ if [ $# -eq 2 ] && ! expr "$1" : '0*$' >/dev/null; then
 fi
 
 echo "facets: manifest changed, running 'facet install'"
-cd "$root" && facet install
+cd "$root" && facet install --accept-mcp
