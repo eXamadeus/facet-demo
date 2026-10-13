@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Shared helper: run `facet install` when the facets manifest or lockfile
+# changed between two revisions. Called by post-merge, post-rewrite and
+# post-checkout.
+#
+# Usage: facet-install [<old-rev> <new-rev>]
+# With no revisions, the install always runs.
+
+set -e
+
+root=$(git rev-parse --show-toplevel) || exit 0
+[ -f "$root/facets.json" ] || exit 0
+
+if ! command -v facet >/dev/null 2>&1; then
+	echo "facet: command not found, skipping facet install" >&2
+	exit 0
+fi
+
+# A null old-rev means a fresh clone — nothing to compare against, always install.
+if [ $# -eq 2 ] && ! expr "$1" : '0*$' >/dev/null; then
+	changed=$(git diff --name-only "$1" "$2" -- facets.json facets.lock 2>/dev/null) || changed=""
+	[ -n "$changed" ] || exit 0
+fi
+
+echo "facets: manifest changed, running 'facet install'"
+cd "$root" && facet install

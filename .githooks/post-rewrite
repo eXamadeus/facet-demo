@@ -1,0 +1,4 @@
+#!/bin/sh
+# Runs after `git rebase` (including `git pull --rebase`) and `git commit --amend`.
+[ "$1" = "rebase" ] || exit 0
+exec "$(dirname "$0")/facet-install" ORIG_HEAD HEAD

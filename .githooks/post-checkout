@@ -1,0 +1,5 @@
+#!/bin/sh
+# Runs after `git checkout`/`git switch` and after `git clone`.
+# $1 = previous HEAD, $2 = new HEAD, $3 = 1 for a branch checkout, 0 for a file checkout.
+[ "$3" = "1" ] || exit 0
+exec "$(dirname "$0")/facet-install" "$1" "$2"

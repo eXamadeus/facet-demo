@@ -1,0 +1,3 @@
+#!/bin/sh
+# Runs after `git merge` and after `git pull` (merge strategy).
+exec "$(dirname "$0")/facet-install" HEAD@{1} HEAD
