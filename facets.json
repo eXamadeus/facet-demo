@@ -1,6 +1,7 @@
 {
   "manifestVersion": 0.2,
   "facets": {
-    "facet-meta": "1.1.1"
+    "facet-meta": "1.1.1",
+    "cowsay": "1.0.1"
   }
 }

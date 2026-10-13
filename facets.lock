@@ -1,6 +1,73 @@
 {
   "lockfileVersion": 0.4,
   "facets": {
+    "cowsay": {
+      "source": {
+        "kind": "registry",
+        "registry": "https://api.agentfacets.io"
+      },
+      "version": "1.0.1",
+      "integrity": "sha256:aa526ad78d470605791c99204792df8afe81fb497778e4d1712261da6f517e67",
+      "assets": [
+        {
+          "scope": "project",
+          "type": "skill",
+          "name": "cowsay-rules",
+          "materialization": {
+            "kind": "authored"
+          },
+          "files": [
+            {
+              "path": "skills/cowsay-rules/SKILL.md",
+              "integrity": "sha256:1160ade3622a3d45114c3cf6d9fccb0e565b880ac9728886ae69e6766bde5092"
+            }
+          ]
+        },
+        {
+          "scope": "project",
+          "type": "agent",
+          "name": "cowsay",
+          "materialization": {
+            "kind": "authored"
+          },
+          "files": [
+            {
+              "path": "agents/cowsay.md",
+              "integrity": "sha256:61190c64c8b6f925718c6d27fa21c2ee1af7299fb00eeb21c65201cb0fec0b6d"
+            }
+          ]
+        },
+        {
+          "scope": "project",
+          "type": "command",
+          "name": "cowchat",
+          "materialization": {
+            "kind": "authored"
+          },
+          "files": [
+            {
+              "path": "commands/cowchat.md",
+              "integrity": "sha256:2cc1f8723c1ac12eabaeeb56ff0f95cc4d22d5cb687bfc40f7015244ffcc0231"
+            }
+          ]
+        },
+        {
+          "scope": "project",
+          "type": "command",
+          "name": "cowsay",
+          "materialization": {
+            "kind": "authored"
+          },
+          "files": [
+            {
+              "path": "commands/cowsay.md",
+              "integrity": "sha256:dfb51935425ff8efade68abc246b35f366aa62ac44b242210035b88f397ec6fe"
+            }
+          ]
+        }
+      ],
+      "servers": []
+    },
     "facet-meta": {
       "source": {
         "kind": "registry",
